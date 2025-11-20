@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Systems Architect | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="AI-Augmented Architect">AI-Augmented Architect</h1>
+                <p class="subtitle">Delivering Quarters of Work in Weeks | First Principles Engineering</p>
+                <p class="bio">Leveraging Coding and Research Agents to build enterprise-grade systems at 10x velocity.</p>
+                <div class="cta-group">
+                    <a href="#projects" class="btn btn-primary">View Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section-dark">
+        <div class="container">
+            <h2 class="section-title">The "Serious Engineer" Advantage</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>In the age of AI, anyone can generate code. But building scalable, secure, and maintainable systems requires <strong>deep engineering experience</strong>.</p>
+                    <p>With <strong>15+ years of enterprise background</strong> (Distributed Systems, High-Scale Architecture), I don't just "vibe code." I use AI agents to accelerate the implementation of <strong>robust architectures</strong>. I combine the velocity of GenAI with the rigor of traditional engineering to deliver production-grade systems in weeks, not quarters.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fas fa-building"></i>
+                        <h3>Enterprise Core</h3>
+                        <p>15+ Years Exp, Distributed Systems</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-rocket"></i>
+                        <h3>10x Velocity</h3>
+                        <p>AI-Augmented Development</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fab fa-aws"></i>
+                        <h3>Cloud Native</h3>
+                        <p>Serverless & Scalable</p>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fas fa-robot"></i>
+                        <h3>Agentic</h3>
+                        <p>Research & Coding Agents</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-light">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="tag enterprise">Enterprise</span>
+                        <h3>Document Intelligence Platform</h3>
+                    </div>
+                    <p>Architected a serverless GenAI platform to automate complex document analysis for the insurance domain. Reduced manual review time significantly while maintaining strict enterprise security.</p>
+                    <div class="tech-stack">
+                        <span>AWS Step Functions</span>
+                        <span>Bedrock</span>
+                        <span>Lambda</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="tag passion">Passion Project</span>
+                        <h3>Quantitative Market Analysis</h3>
+                    </div>
+                    <p>A comprehensive Python-based toolkit for automated stock screening, technical analysis, and portfolio sizing. Automating complex financial workflows with robust data engineering.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>TA-Lib</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="tag research">R&D</span>
+                        <h3>LLM Internals Deep Dive</h3>
+                    </div>
+                    <p>Training and fine-tuning GPT-style models from scratch to understand the full lifecycle of AI development. Because you can't effectively debug an LLM if you don't understand how it learns.</p>
+                    <div class="tech-stack">
+                        <span>PyTorch</span>
+                        <span>Transformers</span>
+                        <span>CUDA</span>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="card-header">
+                        <span class="tag active">Active Dev</span>
+                        <h3>Real-Time Agentic Workflows</h3>
+                    </div>
+                    <p>Designing and implementing <strong>real-time</strong> autonomous agent frameworks that handle complex, multi-step reasoning tasks in production. Moving beyond simple chains to true agentic behavior.</p>
+                    <div class="tech-stack">
+                        <span>Multi-Agent Systems</span>
+                        <span>Real-Time Inference</span>
+                        <span>Production</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="section-dark">
+        <div class="container">
+            <h2 class="section-title">Architecture Spotlight: Context Engineering</h2>
+            <p class="section-subtitle" style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                The secret to production AI isn't just the model—it's the <strong>Context Architecture</strong>. I design systems that intelligently route user intent to the correct data substrate: <strong>Structured</strong> (APIs/DBs), <strong>Unstructured</strong> (KBs), or <strong>Deterministic Workflows</strong> (Code).
+            </p>
+            <div class="mermaid-container">
+                <div class="mermaid">
+flowchart TD
+    %% Nodes
+    User([User Request]) --> Router{Semantic Router}
+
+    subgraph Context_Engineering ["Context Engineering Layer"]
+        direction TB
+
+        subgraph Unstructured ["Unstructured Data (RAG)"]
+            KB[("Knowledge Base<br>(Vector DB)")]
+            Docs[("Corp Documents")]
+        end
+
+        subgraph Structured ["Structured Data (Transactional)"]
+            API[("Enterprise APIs")]
+            SQL[("SQL / NoSQL DBs")]
+        end
+
+        subgraph Deterministic ["Deterministic Workflows"]
+            Logic[["Business Logic<br>(Code/Rules)"]]
+            DocGen[["Doc Generation"]]
+        end
+    end
+
+    %% Routing Logic
+    Router -- "Informational" --> Unstructured
+    Router -- "Transactional" --> Structured
+    Router -- "Process/Task" --> Deterministic
+
+    %% Synthesis
+    Unstructured --> Context{Context Window}
+    Structured --> Context
+    Deterministic --> Context
+
+    Context --> LLM((LLM Agent))
+    LLM --> Response([Context-Aware Response])
+
+    %% Styling
+    classDef user fill:#3b82f6,stroke:#1d4ed8,color:#fff,stroke-width:2px;
+    classDef router fill:#8b5cf6,stroke:#6d28d9,color:#fff,stroke-width:2px;
+    classDef data fill:#1e293b,stroke:#475569,color:#cbd5e1,stroke-dasharray: 5 5;
+    classDef logic fill:#0f172a,stroke:#334155,color:#94a3b8;
+    classDef ai fill:#10b981,stroke:#047857,color:#fff,stroke-width:2px;
+
+    class User,Response user;
+    class Router,Context router;
+    class KB,Docs,API,SQL data;
+    class Logic,DocGen logic;
+    class LLM ai;
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-dark">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/prasnna-parthasarathy-74750316/" class="contact-btn" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/prasnna" class="contact-btn" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:prasnna@gmail.com" class="contact-btn"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Systems Architect. Built with First Principles.</p>
+        </div>
+    </footer>
+
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            securityLevel: 'loose',
+            themeVariables: {
+                fontFamily: 'Inter',
+                primaryColor: '#3b82f6',
+                primaryTextColor: '#fff',
+                primaryBorderColor: '#1d4ed8',
+                lineColor: '#94a3b8',
+                secondaryColor: '#1e293b',
+                tertiaryColor: '#0f172a'
+            }
+        });
+    </script>
+</body>
+</html>

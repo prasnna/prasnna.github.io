@@ -1,0 +1,15 @@
+# Ignore metadata files
+*.metadata.json
+*.resolved
+*.resolved.*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
