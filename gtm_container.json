@@ -1,0 +1,109 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2025-11-21 20:00:00",
+  "containerVersion": {
+    "path": "accounts/6000000000/containers/00000000/versions/0",
+    "accountId": "6000000000",
+    "containerId": "00000000",
+    "containerVersionId": "0",
+    "name": "Custom Tracking Import - Variables and Trigger Only",
+    "container": {
+      "path": "accounts/6000000000/containers/00000000",
+      "accountId": "6000000000",
+      "containerId": "00000000",
+      "name": "prasnna.github.io",
+      "publicId": "GTM-MLT8VW9S",
+      "usageContext": [
+        "WEB"
+      ],
+      "fingerprint": "0",
+      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6000000000/containers/00000000/workspaces?apiLink=container"
+    },
+    "trigger": [
+      {
+        "accountId": "6000000000",
+        "containerId": "00000000",
+        "triggerId": "4",
+        "name": "Custom Interaction Event",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "custom_interaction"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "variable": [
+      {
+        "accountId": "6000000000",
+        "containerId": "00000000",
+        "variableId": "5",
+        "name": "DLV - Category",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "eventCategory"
+          }
+        ]
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "00000000",
+        "variableId": "6",
+        "name": "DLV - Action",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "eventAction"
+          }
+        ]
+      },
+      {
+        "accountId": "6000000000",
+        "containerId": "00000000",
+        "variableId": "7",
+        "name": "DLV - Label",
+        "type": "v",
+        "parameter": [
+          {
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "eventLabel"
+          }
+        ]
+      }
+    ],
+    "fingerprint": "0"
+  }
+}
