@@ -1,5 +1,6 @@
 import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
 import { architectureDiagram } from './architecture-diagram.js';
+import { Tracking } from './tracking.js';
 
 // Initialize Mermaid
 mermaid.initialize({
@@ -20,6 +21,9 @@ mermaid.initialize({
 // Render architecture diagram
 // Render architecture diagram
 document.addEventListener('DOMContentLoaded', async () => {
+    // Initialize Tracking
+    new Tracking();
+
     const diagramContainer = document.querySelector('#architecture .mermaid');
     if (diagramContainer) {
         try {
