@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MLT8VW9S');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sub-Industry Analysis</title>
@@ -76,8 +83,12 @@
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLT8VW9S"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="chart-header">
-        <a href="../market-intelligence.html" class="back-link">
+        <a href="../market-intelligence.html" class="back-link" data-track-category="RRG Navigation" data-track-action="Click" data-track-label="Back from Sub-Industry Chart">
             <i class="fas fa-arrow-left"></i> Back to Analysis
         </a>
         <h1 class="chart-title">Sub-Industry Signals</h1>
@@ -87,5 +98,19 @@
     <div class="chart-container">
         <iframe src="rrg_smart_sub_industry.html" title="Sub-Industry Rotation Chart"></iframe>
     </div>
+
+    <script type="module">
+        import { Tracking } from '../js/tracking.js';
+        new Tracking();
+
+        // Track page view
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': 'page_view',
+            'page_title': 'Sub-Industry Rotation Analysis',
+            'page_location': window.location.href,
+            'page_path': window.location.pathname
+        });
+    </script>
 </body>
 </html>
