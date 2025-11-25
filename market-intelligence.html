@@ -279,7 +279,7 @@
                     <h3>Sector Rotation</h3>
                     <p class="viz-subtitle">Who's Leading?</p>
                     <p>Track broad market rotation across major sectors. Identify which sectors are gaining or losing momentum relative to the market benchmark.</p>
-                    <a href="RRG/rrg_smart_sector.html" class="viz-link">
+                    <a href="RRG/sector.html" class="viz-link">
                         View Interactive Chart <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -288,7 +288,7 @@
                     <h3>Industry Deep Dive</h3>
                     <p class="viz-subtitle">Industries in Motion</p>
                     <p>Granular analysis of industry-level rotation. Discover emerging trends and rotation patterns at the industry level.</p>
-                    <a href="RRG/rrg_smart_industry.html" class="viz-link">
+                    <a href="RRG/industry.html" class="viz-link">
                         View Interactive Chart <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -297,7 +297,7 @@
                     <h3>Sub-Industry Signals</h3>
                     <p class="viz-subtitle">Granular Intelligence</p>
                     <p>Deep dive into sub-industry rotation patterns. Identify specific pockets of strength and weakness in the market.</p>
-                    <a href="RRG/rrg_smart_sub_industry.html" class="viz-link">
+                    <a href="RRG/sub-industry.html" class="viz-link">
                         View Interactive Chart <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -306,7 +306,7 @@
                     <h3>Thematic Trends</h3>
                     <p class="viz-subtitle">Custom Factor Analysis</p>
                     <p>Rotation analysis based on custom thematic classifications. Track momentum across investment themes and market narratives.</p>
-                    <a href="RRG/rrg_smart_theme.html" class="viz-link">
+                    <a href="RRG/theme.html" class="viz-link">
                         View Interactive Chart <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
@@ -368,10 +368,33 @@
 
     <section class="section-dark">
         <div class="container">
-            <div class="contact-cta">
-                <h2>Interested in the methodology?</h2>
-                <p>Want to learn more about the data pipeline, filtering logic, or access the source code? Let's connect.</p>
-                <a href="index.html#contact" class="btn btn-primary">View Bio & Contact</a>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <!-- Navigation Card -->
+                <div class="contact-cta" style="margin: 0;">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;">Quick Links</h3>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <a href="index.html" class="btn btn-secondary" style="width: 100%; text-align: center;">← Back to Portfolio</a>
+                        <a href="#visualizations" class="btn btn-secondary" style="width: 100%; text-align: center;">↑ View All Charts</a>
+                        <a href="index.html#contact" class="btn btn-secondary" style="width: 100%; text-align: center;">💬 Get In Touch</a>
+                    </div>
+                </div>
+
+                <!-- Support Card -->
+                <div class="contact-cta" style="margin: 0; border: 2px solid var(--accent); background: linear-gradient(145deg, rgba(59, 130, 246, 0.1), rgba(30, 41, 59, 0.9));">
+                    <h3 style="font-size: 1.5rem; margin-bottom: 0.75rem;">Find This Useful?</h3>
+                    <p style="margin-bottom: 1.5rem; font-size: 1rem;">If these visualizations helped you, consider supporting my work!</p>
+                    <a href="https://buymeacoffee.com/prasnna" class="btn btn-primary" target="_blank" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-coffee"></i> Buy Me a Coffee
+                    </a>
+                </div>
+            </div>
+
+            <!-- Methodology Note -->
+            <div style="text-align: center; padding: 2rem; background: var(--card-bg); border-radius: 0.75rem; border: 1px solid var(--border);">
+                <p style="color: var(--text-secondary); margin: 0;">
+                    Interested in the <strong>methodology</strong>, <strong>data pipeline</strong>, or <strong>source code</strong>?
+                    <a href="index.html#contact" style="color: var(--accent); text-decoration: none; font-weight: 600;">Let's connect →</a>
+                </p>
             </div>
         </div>
     </section>
