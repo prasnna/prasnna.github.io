@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Rotation Analysis | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* Market Intelligence Specific Styles */
+        .mi-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at top, #1e293b 0%, #020617 100%);
+            padding: 4rem 0;
+        }
+
+        .mi-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #f472b6 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .mi-hero .subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .viz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .viz-card {
+            background: linear-gradient(145deg, var(--card-bg), rgba(30, 41, 59, 0.5));
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .viz-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(167, 139, 250, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .viz-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px -15px rgba(59, 130, 246, 0.4);
+        }
+
+        .viz-card:hover::before {
+            opacity: 1;
+        }
+
+        .viz-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .viz-card .viz-subtitle {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .viz-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .viz-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            transition: gap 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .viz-link:hover {
+            gap: 0.75rem;
+        }
+
+        .viz-link i {
+            transition: transform 0.3s ease;
+        }
+
+        .viz-link:hover i {
+            transform: translateX(3px);
+        }
+
+        .pipeline-section {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin: 3rem 0;
+        }
+
+        .pipeline-toggle {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            user-select: none;
+        }
+
+        .pipeline-toggle h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .pipeline-toggle i {
+            transition: transform 0.3s ease;
+            color: var(--accent);
+        }
+
+        .pipeline-toggle.active i {
+            transform: rotate(180deg);
+        }
+
+        .pipeline-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .pipeline-content.active {
+            max-height: 1000px;
+            margin-top: 2rem;
+        }
+
+        .pipeline-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .pipeline-step {
+            background: var(--bg-darker);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .pipeline-step .step-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin: 0 auto 1rem;
+        }
+
+        .pipeline-step h4 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pipeline-step p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .contact-cta {
+            background: linear-gradient(145deg, var(--card-bg), rgba(30, 41, 59, 0.8));
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            margin: 4rem 0 2rem;
+        }
+
+        .contact-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-cta p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+            gap: 0.75rem;
+        }
+
+        @media (max-width: 768px) {
+            .mi-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .viz-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="mi-hero">
+        <div class="container">
+            <a href="index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+            <h1>Market Rotation Analysis</h1>
+            <p class="subtitle">Interactive analysis of 500+ stocks across sectors, industries, and themes using Relative Rotation Graph methodology</p>
+            <div class="btn-container">
+                <a href="#visualizations" class="btn btn-primary">Explore Visualizations →</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="visualizations" class="section-dark">
+        <div class="container">
+            <h2 class="section-title">Interactive Charts</h2>
+
+            <div class="viz-grid">
+                <div class="viz-card">
+                    <h3>Sector Rotation</h3>
+                    <p class="viz-subtitle">Who's Leading?</p>
+                    <p>Track broad market rotation across major sectors. Identify which sectors are gaining or losing momentum relative to the market benchmark.</p>
+                    <a href="RRG/rrg_smart_sector.html" class="viz-link">
+                        View Interactive Chart <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="viz-card">
+                    <h3>Industry Deep Dive</h3>
+                    <p class="viz-subtitle">Industries in Motion</p>
+                    <p>Granular analysis of industry-level rotation. Discover emerging trends and rotation patterns at the industry level.</p>
+                    <a href="RRG/rrg_smart_industry.html" class="viz-link">
+                        View Interactive Chart <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="viz-card">
+                    <h3>Sub-Industry Signals</h3>
+                    <p class="viz-subtitle">Granular Intelligence</p>
+                    <p>Deep dive into sub-industry rotation patterns. Identify specific pockets of strength and weakness in the market.</p>
+                    <a href="RRG/rrg_smart_sub_industry.html" class="viz-link">
+                        View Interactive Chart <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="viz-card">
+                    <h3>Thematic Trends</h3>
+                    <p class="viz-subtitle">Custom Factor Analysis</p>
+                    <p>Rotation analysis based on custom thematic classifications. Track momentum across investment themes and market narratives.</p>
+                    <a href="RRG/rrg_smart_theme.html" class="viz-link">
+                        View Interactive Chart <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-light">
+        <div class="container">
+            <div class="pipeline-section">
+                <div class="pipeline-toggle" onclick="togglePipeline()">
+                    <h3>How does this work?</h3>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="pipeline-content" id="pipelineContent">
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        The analysis transforms raw market data into rotation signals through a 4-step pipeline:
+                    </p>
+
+                    <div class="pipeline-steps">
+                        <div class="pipeline-step">
+                            <div class="step-number">1</div>
+                            <h4>Data & Scoring</h4>
+                            <p>500+ stocks analyzed weekly for relative strength (RS Rating 0-100)</p>
+                        </div>
+
+                        <div class="pipeline-step">
+                            <div class="step-number">2</div>
+                            <h4>Smart Filtering</h4>
+                            <p>Significance-based filtering tracks important groups across time</p>
+                        </div>
+
+                        <div class="pipeline-step">
+                            <div class="step-number">3</div>
+                            <h4>RRG Calculation</h4>
+                            <p>Calculate RS-Ratio (vs market) and RS-Momentum (rate of change)</p>
+                        </div>
+
+                        <div class="pipeline-step">
+                            <div class="step-number">4</div>
+                            <h4>Visualization</h4>
+                            <p>Interactive Plotly charts showing rotation across 4 quadrants</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem; padding: 1.5rem; background: var(--bg-darker); border-radius: 0.75rem; border-left: 3px solid var(--accent);">
+                        <h4 style="margin-bottom: 0.5rem;">Understanding the Quadrants</h4>
+                        <ul style="color: var(--text-secondary); line-height: 1.8; padding-left: 1.5rem;">
+                            <li><strong style="color: #34d399;">Leading:</strong> Strong & Getting Stronger</li>
+                            <li><strong style="color: #fbbf24;">Weakening:</strong> Strong but Slowing Down</li>
+                            <li><strong style="color: #ef4444;">Lagging:</strong> Weak & Getting Weaker</li>
+                            <li><strong style="color: #60a5fa;">Improving:</strong> Weak but Waking Up</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-dark">
+        <div class="container">
+            <div class="contact-cta">
+                <h2>Interested in the methodology?</h2>
+                <p>Want to learn more about the data pipeline, filtering logic, or access the source code? Let's connect.</p>
+                <a href="index.html#contact" class="btn btn-primary">View Bio & Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 AI Systems Architect. Built with First Principles.</p>
+        </div>
+    </footer>
+
+    <script>
+        function togglePipeline() {
+            const toggle = document.querySelector('.pipeline-toggle');
+            const content = document.getElementById('pipelineContent');
+
+            toggle.classList.toggle('active');
+            content.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
