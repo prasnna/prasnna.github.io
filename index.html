@@ -11,18 +11,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prasnna Parthasarathy — Senior Software Engineer</title>
+
+    <!-- JS detection -->
+    <script>document.documentElement.className += ' js-enabled';</script>
+
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <meta name="description" content="Prasnna Parthasarathy — Senior Software Engineer. 15 years of Java, Spring Boot, and AWS. Lately building Gen AI tooling and agentic systems at Plymouth Rock Assurance.">
+    <meta name="description" content="Prasnna Parthasarathy — Senior Software Engineer. 15 years of Java, Spring Boot, and AWS. Building Gen AI tooling and agentic systems at Plymouth Rock Assurance.">
     <meta property="og:title" content="Prasnna Parthasarathy — Senior Software Engineer">
     <meta property="og:description" content="Java/AWS engineer, 15 years. Recently building LangChain agents, MCP tooling, and Gen AI pipelines in production.">
     <meta property="og:url" content="https://prasnna.github.io/">
     <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Prasnna Parthasarathy">
-    <meta name="twitter:description" content="Senior Software Engineer. Java, AWS, Spring Boot, Gen AI tooling.">
 
     <script type="application/ld+json">
     {
@@ -40,90 +41,188 @@
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLT8VW9S"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
+    <!-- ===== NAV ===== -->
+    <nav id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">pp<span class="nav-logo-dot">.</span></a>
+            <div class="nav-links">
+                <a href="#about">Background</a>
+                <a href="#work">Work</a>
+                <a href="#thinking">Thinking</a>
+                <a href="#contact">Contact</a>
+                <a href="https://github.com/prasnna" target="_blank" class="nav-gh"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
     <header class="hero">
+        <div class="hero-bg">
+            <div class="hero-grid"></div>
+        </div>
         <div class="container">
             <div class="hero-content">
-                <div class="terminal-prompt">
-                    <span class="prompt-symbol">~/prasnna</span> <span class="cursor-blink">▌</span>
+                <div class="terminal-window">
+                    <div class="terminal-bar">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                        <span class="terminal-title">prasnna@github ~ </span>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="t-prompt">❯</span>
+                            <span class="typed-text" id="typed">whoami</span><span class="t-cursor">▌</span>
+                        </div>
+                    </div>
                 </div>
-                <h1>Prasnna Parthasarathy</h1>
-                <p class="role">Senior Software Engineer &mdash; Java, AWS, Spring Boot</p>
-                <p class="bio">
-                    15 years building backend systems — enterprise Java for most of it,
-                    AWS for the last five. For the past couple of years I've been building
-                    Gen AI tooling in production at Plymouth Rock: LangChain agents, agentic
-                    pipelines on Bedrock, MCP tooling. On the side I run a fintech data project
-                    I actually use.
+
+                <h1 class="hero-name">Prasnna Parthasarathy</h1>
+                <p class="hero-role">Senior Software Engineer</p>
+
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">15</span>
+                        <span class="stat-label">years engineering</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">5+</span>
+                        <span class="stat-label">years on AWS</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">3</span>
+                        <span class="stat-label">agents in prod</span>
+                    </div>
+                </div>
+
+                <p class="hero-bio">
+                    Java and Spring Boot for most of 15 years. AWS for the last five.
+                    Building Gen AI agents and MCP tooling in production now.
+                    Senior experience + agentic coding tools = a combination that compounds.
                 </p>
-                <p class="bio">
-                    I'm also deep into agentic coding — using AI coding assistants as a core
-                    part of how I actually write software. The velocity is real. But I think
-                    the reason it works well for me is the 15 years of context: I know what
-                    the generated code should look like, where it's going to cut corners, and
-                    when to throw it out. Senior judgment + these tools compounds in a way
-                    that's hard to get without both sides of it.
-                </p>
+
                 <div class="cta-group">
                     <a href="#work" class="btn btn-primary" data-track-category="Hero" data-track-action="Click" data-track-label="See Work">See what I've built</a>
-                    <a href="https://github.com/prasnna" class="btn btn-secondary" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#contact" class="btn btn-secondary">Get in touch</a>
                 </div>
             </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>scroll</span>
+            <i class="fas fa-chevron-down"></i>
         </div>
     </header>
 
-    <section id="about" class="section-dark">
+    <!-- ===== ABOUT / TIMELINE ===== -->
+    <section id="about">
         <div class="container">
-            <h2 class="section-title">Background</h2>
-            <div class="about-layout">
-                <div class="about-text">
-                    <p>
-                        I started at TCS in 2009 maintaining an OLAP analytics platform for AC Nielsen —
-                        full-stack, mostly Java and some front-end work. Moved to Cognizant in 2014
-                        doing enterprise Java for clients like State Street, NY Life, and MetLife:
-                        REST services, SOAP services, Spring, regulatory reporting.
-                    </p>
-                    <p>
-                        I've been at Plymouth Rock Assurance since 2017 as a Senior Software Engineer.
-                        The bulk of that was Java/Spring Boot — policy and agency management systems,
-                        Kubernetes, DocumentDB, API Gateway. More recently the work has shifted toward
-                        Gen AI: production agents built on LangChain + Bedrock, RAG pipelines, MCP tooling,
-                        a claims processing pipeline with Textract and multimodal Bedrock models.
-                    </p>
-                    <p>
-                        Python is intermediate — I use it for the AI/ML tooling and my fintech side project,
-                        not as my primary production language.
-                    </p>
+            <div class="section-header reveal">
+                <span class="section-tag">background</span>
+                <h2>15 years building things</h2>
+            </div>
+
+            <div class="timeline reveal">
+                <div class="tl-item">
+                    <div class="tl-marker">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-meta">
+                            <span class="tl-company">TCS</span>
+                            <span class="tl-period">Dec 2009 – Feb 2014</span>
+                        </div>
+                        <h3 class="tl-role">IT Analyst</h3>
+                        <p>Full-stack developer on an OLAP analytics platform for AC Nielsen. Java backend, front-end UI, data analysis support. Where I learned that the boring infrastructure work is actually the important work.</p>
+                        <div class="tl-tags">
+                            <span>Java</span><span>HTML/CSS/JS</span><span>SQL</span><span>OLAP</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="stack-section">
-                    <h3 class="stack-label">Stack</h3>
-                    <div class="stack-list">
-                        <div class="stack-item">
-                            <span class="stack-lang">Java / Spring Boot</span>
-                            <span class="stack-note">primary language, 11+ years</span>
+
+                <div class="tl-item">
+                    <div class="tl-marker">
+                        <div class="tl-dot"></div>
+                        <div class="tl-line"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-meta">
+                            <span class="tl-company">Cognizant</span>
+                            <span class="tl-period">Feb 2014 – Oct 2017</span>
                         </div>
-                        <div class="stack-item">
-                            <span class="stack-lang">AWS</span>
-                            <span class="stack-note">Lambda, Bedrock, Step Functions, ECS, SQS, S3</span>
+                        <h3 class="tl-role">Senior Software Consultant</h3>
+                        <p>Enterprise Java across regulated industries — State Street (regulatory reporting, REST services, in-memory cache for large datasets), NY Life (ACCORD XML transformation via SOAP/Apache CXF), MetLife (batch-to-realtime migration).</p>
+                        <div class="tl-tags">
+                            <span>Java</span><span>Spring</span><span>REST</span><span>SOAP</span><span>Apache CXF</span>
                         </div>
-                        <div class="stack-item">
-                            <span class="stack-lang">Python</span>
-                            <span class="stack-note">Gen AI tooling, data projects</span>
+                    </div>
+                </div>
+
+                <div class="tl-item">
+                    <div class="tl-marker">
+                        <div class="tl-dot tl-dot-active"></div>
+                    </div>
+                    <div class="tl-content">
+                        <div class="tl-meta">
+                            <span class="tl-company tl-current">Plymouth Rock Assurance</span>
+                            <span class="tl-period">Oct 2017 – Present</span>
                         </div>
-                        <div class="stack-item">
-                            <span class="stack-lang">LangChain</span>
-                            <span class="stack-note">ReAct agents, RAG, SQL chain</span>
+                        <h3 class="tl-role">Senior Software Engineer</h3>
+                        <p>Started building core policy and agency management systems in Java/Spring Boot on Kubernetes. For the last couple of years, shifted to Gen AI: LangChain agents, Bedrock pipelines, MCP tooling — all in production.</p>
+                        <div class="tl-tags">
+                            <span>Java</span><span>Spring Boot</span><span>AWS</span><span>K8s</span><span>LangChain</span><span>Bedrock</span><span>MCP</span>
                         </div>
-                        <div class="stack-item">
-                            <span class="stack-lang">MCP</span>
-                            <span class="stack-note">Elastic MCP, browser tools, custom servers</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- STACK -->
+            <div class="stack-block reveal">
+                <h3 class="stack-heading">Stack</h3>
+                <div class="stack-groups">
+                    <div class="stack-group">
+                        <span class="stack-group-label">Backend</span>
+                        <div class="stack-pills">
+                            <span class="pill pill-primary">Java / J2EE</span>
+                            <span class="pill pill-primary">Spring Boot</span>
+                            <span class="pill">Spring MVC</span>
+                            <span class="pill">Python</span>
+                            <span class="pill">Node.js</span>
+                            <span class="pill">Kafka</span>
                         </div>
-                        <div class="stack-item">
-                            <span class="stack-lang">Kubernetes / Docker</span>
-                            <span class="stack-note">container orchestration</span>
+                    </div>
+                    <div class="stack-group">
+                        <span class="stack-group-label">Cloud &amp; Infra</span>
+                        <div class="stack-pills">
+                            <span class="pill pill-primary">AWS</span>
+                            <span class="pill">Lambda</span>
+                            <span class="pill">Bedrock</span>
+                            <span class="pill">Step Functions</span>
+                            <span class="pill">Kubernetes</span>
+                            <span class="pill">Docker</span>
                         </div>
-                        <div class="stack-item">
-                            <span class="stack-lang">Kafka / MongoDB / SQL</span>
-                            <span class="stack-note">messaging and data layers</span>
+                    </div>
+                    <div class="stack-group">
+                        <span class="stack-group-label">AI / Gen AI</span>
+                        <div class="stack-pills">
+                            <span class="pill pill-accent">LangChain</span>
+                            <span class="pill pill-accent">MCP</span>
+                            <span class="pill pill-accent">Bedrock Agent Core</span>
+                            <span class="pill">Qdrant</span>
+                            <span class="pill">RAG</span>
+                            <span class="pill">ReAct</span>
+                        </div>
+                    </div>
+                    <div class="stack-group">
+                        <span class="stack-group-label">Data &amp; Other</span>
+                        <div class="stack-pills">
+                            <span class="pill">SQL / PL-SQL</span>
+                            <span class="pill">MongoDB</span>
+                            <span class="pill">DocumentDB</span>
+                            <span class="pill">Angular</span>
+                            <span class="pill">Pandas / Plotly</span>
                         </div>
                     </div>
                 </div>
@@ -131,194 +230,160 @@
         </div>
     </section>
 
-    <section id="work" class="section-light">
+    <!-- ===== WORK ===== -->
+    <section id="work" class="section-alt">
         <div class="container">
-            <h2 class="section-title">Things I've built</h2>
-            <div class="projects-grid">
+            <div class="section-header reveal">
+                <span class="section-tag">work</span>
+                <h2>Things I've built</h2>
+            </div>
 
-                <div class="project-card">
-                    <div class="card-header">
-                        <span class="tag active">Plymouth Rock</span>
+            <!-- Featured -->
+            <div class="project-featured reveal">
+                <div class="pf-label">
+                    <span class="tag-active">Active · Plymouth Rock</span>
+                </div>
+                <div class="pf-body">
+                    <div class="pf-text">
                         <h3>Prod Support Agent</h3>
+                        <p>
+                            LangChain ReAct agent connected to Elasticsearch via Elastic MCP,
+                            a Playwright browser tool, a Qdrant RAG store, and short/long semantic
+                            memory. Running on AWS Bedrock Agent Core, orchestrated via n8n.
+                            Designed to automate repeated prod support tasks with minimum autonomy
+                            first — expand as trust is established.
+                        </p>
+                        <p class="pf-note">
+                            The interesting design constraint: it has to be trustworthy enough
+                            that on-call engineers actually hand it tasks at 3am.
+                        </p>
                     </div>
-                    <p>
-                        LangChain ReAct agent wired up to an Elasticsearch cluster via Elastic MCP,
-                        a Playwright browser tool, a Qdrant RAG store, and short/long semantic memory.
-                        The goal is to automate repeated prod support tasks step by step —
-                        starting with low autonomy and working up. Orchestrated via n8n,
-                        running on AWS Bedrock Agent Core.
-                    </p>
-                    <div class="tech-stack">
+                    <div class="pf-stack">
                         <span>LangChain</span>
-                        <span>MCP</span>
+                        <span>Elastic MCP</span>
                         <span>Qdrant</span>
                         <span>Bedrock Agent Core</span>
+                        <span>Playwright</span>
                         <span>n8n</span>
+                        <span>AWS</span>
                     </div>
                 </div>
+            </div>
 
-                <div class="project-card">
-                    <div class="card-header">
-                        <span class="tag active">Plymouth Rock</span>
+            <!-- Grid -->
+            <div class="projects-grid">
+                <div class="project-card reveal">
+                    <div class="card-top">
+                        <span class="tag tag-work">Plymouth Rock</span>
                         <h3>Claims Processing Pipeline</h3>
                     </div>
-                    <p>
-                        Multimodal LLM pipeline to analyze claim documents and notes and suggest the
-                        next actions for a given claim. Step Functions orchestrates a chain of Lambdas
-                        — Textract ingests the documents, Bedrock does the analysis. The interesting
-                        part is giving adjusters enough auditability to actually trust the output.
-                    </p>
+                    <p>Multimodal LLM pipeline to analyze claim documents + notes and suggest next actions. Step Functions orchestrates Lambdas — Textract ingests docs, Bedrock does the analysis. The hard part: giving adjusters enough auditability to trust the output.</p>
                     <div class="tech-stack">
-                        <span>AWS Step Functions</span>
-                        <span>Textract</span>
-                        <span>Bedrock</span>
-                        <span>Lambda</span>
-                        <span>Python</span>
+                        <span>Step Functions</span><span>Textract</span><span>Bedrock</span><span>Lambda</span><span>Python</span>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="card-header">
-                        <span class="tag active">Plymouth Rock</span>
+                <div class="project-card reveal">
+                    <div class="card-top">
+                        <span class="tag tag-work">Plymouth Rock</span>
                         <h3>Policy Chat Agent</h3>
                     </div>
-                    <p>
-                        Customer-facing agentic chat that can query policy, claims, and billing
-                        GraphQL APIs and a RAG store with policy documentation.
-                        Per-user memory to track preferences across sessions.
-                        Also on Bedrock Agent Core. The tricky bit was keeping responses
-                        grounded without over-constraining what the agent can look up.
-                    </p>
+                    <p>Customer-facing agentic chat querying policy, claims, and billing GraphQL APIs plus a RAG store with policy docs. Per-user memory across sessions. Tricky balance: grounded enough to be safe, flexible enough to be useful.</p>
                     <div class="tech-stack">
-                        <span>LangChain</span>
-                        <span>GraphQL</span>
-                        <span>Bedrock Agent Core</span>
-                        <span>RAG / Qdrant</span>
+                        <span>LangChain</span><span>GraphQL</span><span>Bedrock Agent Core</span><span>Qdrant</span>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="card-header">
-                        <span class="tag enterprise">Plymouth Rock</span>
-                        <h3>Policy &amp; Agency Management System</h3>
+                <div class="project-card reveal">
+                    <div class="card-top">
+                        <span class="tag tag-java">Plymouth Rock</span>
+                        <h3>Policy &amp; Agency Management</h3>
                     </div>
-                    <p>
-                        The core insurance platform — policy lifecycle and agency management.
-                        Built and maintained the backend in Java/Spring Boot with DocumentDB,
-                        deployed on Kubernetes with Lambda + API Gateway for the service layer.
-                        This was the majority of my work at Plymouth Rock before the AI pivot.
-                    </p>
+                    <p>Core insurance platform — policy lifecycle and agency management. Java/Spring Boot backend on Kubernetes with DocumentDB and Lambda + API Gateway for the service layer. The majority of my time at Plymouth Rock before the AI shift.</p>
                     <div class="tech-stack">
-                        <span>Java</span>
-                        <span>Spring Boot</span>
-                        <span>AWS Lambda</span>
-                        <span>DocumentDB</span>
-                        <span>Kubernetes</span>
+                        <span>Java</span><span>Spring Boot</span><span>Kubernetes</span><span>DocumentDB</span><span>Lambda</span>
                     </div>
                 </div>
 
-                <div class="project-card">
-                    <div class="card-header">
-                        <span class="tag passion">Side project</span>
+                <div class="project-card reveal">
+                    <div class="card-top">
+                        <span class="tag tag-side">Side project</span>
                         <h3>Market Rotation Tracker</h3>
                     </div>
-                    <p>
-                        Relative Rotation Graphs for tracking sector momentum — I wanted to
-                        understand RRG methodology properly so I built it from scratch.
-                        Pulls live market data, calculates RS-Ratio and RS-Momentum,
-                        and renders interactive charts. I actually use it.
-                    </p>
+                    <p>RRG methodology built from scratch — RS-Ratio and RS-Momentum calculations, live market data, interactive Plotly charts. Started as a "let me understand this properly" project and became something I actually use for my own portfolio decisions.</p>
                     <div class="tech-stack">
-                        <span>Python</span>
-                        <span>Pandas</span>
-                        <span>Plotly</span>
+                        <span>Python</span><span>Pandas</span><span>Plotly</span>
                     </div>
-                    <div class="card-actions">
-                        <a href="market-intelligence.html" class="btn btn-primary">View Analysis →</a>
-                    </div>
+                    <a href="market-intelligence.html" class="card-link">View Analysis →</a>
                 </div>
 
-                <div class="project-card">
-                    <div class="card-header">
-                        <span class="tag enterprise">Cognizant</span>
-                        <h3>Regulatory Reporting at State Street</h3>
+                <div class="project-card reveal">
+                    <div class="card-top">
+                        <span class="tag tag-java">Cognizant / State Street</span>
+                        <h3>Regulatory Reporting Platform</h3>
                     </div>
-                    <p>
-                        Designed and built a REST service for high-volume regulatory datasets
-                        with an in-memory cache layer for throughput. Also built a custom
-                        validation framework that automated data quality checks across the pipeline.
-                        Earlier work includes SOAP service dev for NY Life (ACCORD XML transformation)
-                        and a batch-to-realtime migration at MetLife.
-                    </p>
+                    <p>REST service for high-volume regulatory datasets with an in-memory cache layer for throughput. Custom validation framework automating data quality checks. Also: ACCORD XML transformation (NY Life) and batch-to-realtime migration (MetLife).</p>
                     <div class="tech-stack">
-                        <span>Java</span>
-                        <span>Spring</span>
-                        <span>REST</span>
-                        <span>SOAP / Apache CXF</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="notes" class="section-dark">
-        <div class="container">
-            <h2 class="section-title">How I think about this stuff</h2>
-            <div class="notes-grid">
-                <div class="note-item">
-                    <span class="note-num">01</span>
-                    <div class="note-body">
-                        <h3>The model is rarely the bottleneck</h3>
-                        <p>Most production AI problems are data quality, latency, and trust issues — not model capability. I've spent more time building output validators and audit trails than tuning prompts.</p>
-                    </div>
-                </div>
-                <div class="note-item">
-                    <span class="note-num">02</span>
-                    <div class="note-body">
-                        <h3>Start with low autonomy</h3>
-                        <p>The prod support agent starts with workflow tools and human-in-the-loop steps. Agents that do too much too fast are hard to debug and harder to get sign-off for in regulated environments.</p>
-                    </div>
-                </div>
-                <div class="note-item">
-                    <span class="note-num">03</span>
-                    <div class="note-body">
-                        <h3>Enterprise experience matters for AI work</h3>
-                        <p>15 years of Java and regulated-environment deployments means I think about auditability, failure modes, and compliance from the start — not as an afterthought when something goes wrong in prod.</p>
-                    </div>
-                </div>
-                <div class="note-item">
-                    <span class="note-num">04</span>
-                    <div class="note-body">
-                        <h3>Skeptical of the hype cycle</h3>
-                        <p>Agents are genuinely useful. They're also fragile in ways demos don't show. I've shipped both the wins and the failure cases in production — the second teaches you more.</p>
-                    </div>
-                </div>
-                <div class="note-item">
-                    <span class="note-num">05</span>
-                    <div class="note-body">
-                        <h3>Agentic coding is a force multiplier, not a replacement</h3>
-                        <p>I use AI coding assistants heavily and the velocity gain is real. What makes it work is knowing what correct looks like — the right architecture, the edge cases, the things that will bite you in six months. Without that, you're just generating code faster. With it, you're compounding.</p>
+                        <span>Java</span><span>Spring</span><span>REST</span><span>SOAP / Apache CXF</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section-light">
+    <!-- ===== THINKING ===== -->
+    <section id="thinking">
         <div class="container">
-            <div class="contact-block">
-                <h2>Get in touch</h2>
-                <p class="contact-text">
-                    Open to conversations about enterprise AI tooling, agentic systems, or anything
-                    backend. Not actively looking but happy to talk.
-                </p>
-                <div class="contact-links">
-                    <a href="https://github.com/prasnna" class="contact-btn" target="_blank" data-track-category="Contact" data-track-label="GitHub">
-                        <i class="fab fa-github"></i> github.com/prasnna
-                    </a>
-                    <a href="mailto:prasnna@gmail.com" class="contact-btn" data-track-category="Contact" data-track-label="Email">
+            <div class="section-header reveal">
+                <span class="section-tag">thinking</span>
+                <h2>How I think about this stuff</h2>
+            </div>
+
+            <div class="thinking-grid">
+                <div class="thought reveal">
+                    <span class="thought-num">01</span>
+                    <h3>The model is rarely the bottleneck</h3>
+                    <p>Most production AI problems are data quality, latency, and trust — not model capability. I've spent more time building output validators and audit trails than tuning prompts.</p>
+                </div>
+                <div class="thought reveal">
+                    <span class="thought-num">02</span>
+                    <h3>Start with low autonomy</h3>
+                    <p>The prod support agent starts with workflow tools and human-in-the-loop steps. Agents that do too much too fast are hard to debug and harder to get sign-off on in regulated environments.</p>
+                </div>
+                <div class="thought reveal">
+                    <span class="thought-num">03</span>
+                    <h3>Enterprise background pays off in AI work</h3>
+                    <p>15 years in regulated environments means auditability, failure modes, and compliance are first-class concerns — not afterthoughts you bolt on when something goes wrong in prod.</p>
+                </div>
+                <div class="thought reveal">
+                    <span class="thought-num">04</span>
+                    <h3>Skeptical of the hype cycle</h3>
+                    <p>Agents are genuinely useful. They're also fragile in ways demos don't show. I've shipped both the wins and the failure cases — the second teaches you more.</p>
+                </div>
+                <div class="thought thought-wide reveal">
+                    <span class="thought-num">05</span>
+                    <h3>Agentic coding is a force multiplier — if you know what correct looks like</h3>
+                    <p>I use AI coding assistants heavily and the velocity gain is real. What makes it work is 15 years of knowing the right architecture, the edge cases, the abstractions that will bite you in six months. Without that, you're just generating code faster. With it, you're compounding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="section-alt">
+        <div class="container">
+            <div class="contact-block reveal">
+                <div class="contact-text">
+                    <span class="section-tag">contact</span>
+                    <h2>Get in touch</h2>
+                    <p>Open to conversations about enterprise AI tooling, agentic systems, or anything backend. Not actively looking but happy to talk.</p>
+                </div>
+                <div class="contact-actions">
+                    <a href="mailto:prasnna@gmail.com" class="btn btn-primary" data-track-category="Contact" data-track-label="Email">
                         <i class="fas fa-envelope"></i> prasnna@gmail.com
+                    </a>
+                    <a href="https://github.com/prasnna" class="btn btn-secondary" target="_blank" data-track-category="Contact" data-track-label="GitHub">
+                        <i class="fab fa-github"></i> github.com/prasnna
                     </a>
                 </div>
             </div>
@@ -327,7 +392,10 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Prasnna Parthasarathy &mdash; <span class="footer-code">built with plain HTML, no framework</span></p>
+            <div class="footer-inner">
+                <span class="footer-name">Prasnna Parthasarathy</span>
+                <span class="footer-copy">built with plain HTML &mdash; no framework needed</span>
+            </div>
         </div>
     </footer>
 
