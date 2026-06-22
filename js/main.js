@@ -49,10 +49,11 @@ function initTyping() {
 
     const phrases = [
         'whoami',
-        'Senior Software Engineer',
-        'java --version 11.0 && python --version',
+        'Solution Architect · Builder',
+        'temporal workflow list --namespace claims',
         'aws bedrock list-agents | grep active',
-        'git log --oneline -3',
+        'git log --oneline -5  # architect who ships',
+        'docker compose up aiclaims-ws',
     ];
 
     let phraseIndex = 0;
